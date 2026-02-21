@@ -5,6 +5,8 @@ import { CasesPage } from "@/pages/dashboard/cases";
 import { SignInPage } from "@/pages/auth/sign-in";
 import { HomePage } from "@/pages/dashboard/home";
 import { UsersPage } from "@/pages/dashboard/users";
+import { ClientsPage } from "@/pages/dashboard/clients";
+import { ProjectsPage } from "@/pages/dashboard/projects";
 
 export const Routing = () => {
   return (
@@ -19,6 +21,8 @@ export const Routing = () => {
       <Route element={<PrivateRoute />}>
         <Route path="/dashboard" element={<HomePage />} />
         <Route path="/dashboard/users" element={<UsersPage />} />
+        <Route path="/dashboard/clients" element={<ClientsPage />} />
+        <Route path="/dashboard/projects" element={<ProjectsPage />} />
         <Route path="/dashboard/cases" element={<CasesPage />} />
       </Route>
 

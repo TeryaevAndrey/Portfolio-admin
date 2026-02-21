@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/shared/ui/sidebar";
 import { Text } from "@/shared/ui/text";
-import { LayoutDashboard, ToolCase, Users } from "lucide-react";
+import { Contact, LayoutDashboard, PencilRuler, ToolCase, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const DashboardSidebar = () => {
@@ -46,6 +46,24 @@ export const DashboardSidebar = () => {
                   <Link to="/dashboard/users">
                     <Users />
                     <span>Пользователи</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/clients">
+                    <Contact />
+                    <span>Клиенты</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+               <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/projects">
+                    <PencilRuler />
+                    <span>Проекты</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
