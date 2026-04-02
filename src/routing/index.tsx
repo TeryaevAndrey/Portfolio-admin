@@ -7,6 +7,9 @@ import { HomePage } from "@/pages/dashboard/home";
 import { UsersPage } from "@/pages/dashboard/users";
 import { ClientsPage } from "@/pages/dashboard/clients";
 import { ProjectsPage } from "@/pages/dashboard/projects";
+import { StatsPage } from "@/pages/dashboard/stats";
+import { ReviewsPage } from "@/pages/dashboard/reviews";
+import { ServicesPage } from "@/pages/dashboard/services";
 
 export const Routing = () => {
   return (
@@ -24,6 +27,9 @@ export const Routing = () => {
         <Route path="/dashboard/clients" element={<ClientsPage />} />
         <Route path="/dashboard/projects" element={<ProjectsPage />} />
         <Route path="/dashboard/cases" element={<CasesPage />} />
+        <Route path="/dashboard/stats" element={<StatsPage />} />
+        <Route path="/dashboard/reviews" element={<ReviewsPage />} />
+        <Route path="/dashboard/services" element={<ServicesPage />} />
       </Route>
 
       {/* Редирект для всех несуществующих страниц (вместо Redirect) */}

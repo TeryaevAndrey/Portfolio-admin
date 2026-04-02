@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/shared/ui/sidebar";
 import { Text } from "@/shared/ui/text";
-import { Contact, LayoutDashboard, PencilRuler, ToolCase, Users } from "lucide-react";
+import { BarChart2, Briefcase, Contact, LayoutDashboard, MessageSquareQuote, PencilRuler, ToolCase, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const DashboardSidebar = () => {
@@ -73,6 +73,33 @@ export const DashboardSidebar = () => {
                   <Link to="/dashboard/cases">
                     <ToolCase />
                     <span>Кейсы</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/stats">
+                    <BarChart2 />
+                    <span>Статистика</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/reviews">
+                    <MessageSquareQuote />
+                    <span>Отзывы</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/services">
+                    <Briefcase />
+                    <span>Услуги</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
