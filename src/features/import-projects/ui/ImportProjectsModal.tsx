@@ -78,8 +78,10 @@ export const ImportProjectsModal = () => {
 
         <div className="flex flex-col gap-4 mt-2">
           <p className="text-sm text-muted-foreground">
-            Загрузите файл Excel (.xlsx, .xls) с колонками: Название, Сфера,
-            Описание, Начало, Итого, Оплатили, Комиссия, Завершение, Статус.
+            Загрузите файл Excel (.xlsx, .xls). Ожидаемые колонки:{" "}
+            <span className="font-medium text-foreground">Название</span> (клиент),{" "}
+            <span className="font-medium text-foreground">Сфера, Описание, Начало, Итого, Оплатили, Комиссия, Осталось, Завершение, Связь, Статус</span>.
+            Клиент будет создан автоматически. Синие/голубые строки пропускаются. Зелёный цвет строки или статус = «Выполнено».
           </p>
 
           <div

@@ -11,4 +11,6 @@ export const caseQueries = {
       queryKey: [...caseQueries.listKeys(), params] as const,
       queryFn: () => caseApi.getCasesList(params),
     }),
+
+  reorderMutationKey: () => [...caseQueries.allKeys(), "reorder"] as const,
 };

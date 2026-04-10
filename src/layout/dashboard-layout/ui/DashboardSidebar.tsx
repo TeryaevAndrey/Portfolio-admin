@@ -1,4 +1,5 @@
 import { LogoutButton } from "@/features/auth/logout";
+import { CallbacksUnreadBadge } from "@/widgets/callbacks-unread-badge";
 import {
   Sidebar,
   SidebarContent,
@@ -11,7 +12,7 @@ import {
   SidebarMenuItem,
 } from "@/shared/ui/sidebar";
 import { Text } from "@/shared/ui/text";
-import { BarChart2, Briefcase, Contact, LayoutDashboard, MessageSquareQuote, PencilRuler, ToolCase, Users } from "lucide-react";
+import { BarChart2, BookOpen, Briefcase, Calculator, CheckSquare, ClipboardList, Contact, FileText, Files, Inbox, LayoutDashboard, MessageSquareQuote, PencilRuler, Timer, ToolCase, UserRoundSearch, Users, Landmark } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const DashboardSidebar = () => {
@@ -97,9 +98,100 @@ export const DashboardSidebar = () => {
 
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
+                  <Link to="/dashboard/blog">
+                    <BookOpen />
+                    <span>Блог</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
                   <Link to="/dashboard/services">
                     <Briefcase />
                     <span>Услуги</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/proposal-templates">
+                    <FileText />
+                    <span>Шаблоны откликов</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/todos">
+                    <CheckSquare />
+                    <span>Таск-менеджер</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/pomodoro">
+                    <Timer />
+                    <span>Помодоро</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/calculator">
+                    <Calculator />
+                    <span>Калькулятор</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/leads">
+                    <UserRoundSearch />
+                    <span>Лиды</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/documents">
+                    <Files />
+                    <span>Документы</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/finance">
+                    <Landmark />
+                    <span>Финансы</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/callbacks">
+                    <Inbox />
+                    <span>Заявки</span>
+                    <CallbacksUnreadBadge />
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/dashboard/activity-log">
+                    <ClipboardList />
+                    <span>Журнал действий</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>

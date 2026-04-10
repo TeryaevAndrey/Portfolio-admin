@@ -7,9 +7,15 @@ export interface Case {
   title: string;
   description: WithNull<string>;
   link: WithNull<string>;
+  sortOrder: number;
   created_at: string;
 }
 
 export interface GetCasesParams extends PaginationParams {}
 
 export interface GetCasesResponse extends PaginationResponse<Case[]> {}
+
+export interface ReorderCaseItem {
+  id: number;
+  sortOrder: number;
+}

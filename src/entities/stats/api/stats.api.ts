@@ -4,6 +4,11 @@ import type {
   ClientEarningsStat,
   ClientExpensiveStat,
   StatsSummary,
+  DashboardSummary,
+  CallbacksByDay,
+  LeadsFunnelItem,
+  LeadSourceItem,
+  ProjectByStatusItem,
 } from "../model/types";
 
 export const statsApi = {
@@ -41,6 +46,33 @@ export const statsApi = {
       "/stats/clients/top-expensive",
       { params: { limit } }
     );
+    return res.data;
+  },
+
+  getDashboardSummary: async (): Promise<DashboardSummary> => {
+    const res = await axiosInstance.get<DashboardSummary>("/stats/dashboard");
+    return res.data;
+  },
+
+  getCallbacksByDay: async (days = 30): Promise<CallbacksByDay[]> => {
+    const res = await axiosInstance.get<CallbacksByDay[]>("/stats/callbacks/by-day", {
+      params: { days },
+    });
+    return res.data;
+  },
+
+  getLeadsFunnel: async (): Promise<LeadsFunnelItem[]> => {
+    const res = await axiosInstance.get<LeadsFunnelItem[]>("/stats/leads/funnel");
+    return res.data;
+  },
+
+  getLeadSources: async (): Promise<LeadSourceItem[]> => {
+    const res = await axiosInstance.get<LeadSourceItem[]>("/stats/leads/sources");
+    return res.data;
+  },
+
+  getProjectsByStatus: async (): Promise<ProjectByStatusItem[]> => {
+    const res = await axiosInstance.get<ProjectByStatusItem[]>("/stats/projects/by-status");
     return res.data;
   },
 };
